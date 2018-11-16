@@ -14,4 +14,8 @@ public class SimpleService {
     public DomainObject service() {
         return repository.findDomainObject();
     }
+
+    public void doSomthing() {}
+
+    public void doSomethingElse(int dummy) {}
 }
