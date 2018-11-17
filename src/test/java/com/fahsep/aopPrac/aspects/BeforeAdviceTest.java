@@ -25,5 +25,18 @@ public class BeforeAdviceTest {
         beforeAdvice.reset();
     }
 
+    @Test
+    public void beforeIsCalledIfCorrectMethodIsCalled() {
+        assertFalse(beforeAdvice.isBeforecalled());
+        simpleService.doSomthing();
+        assertTrue(beforeAdvice.isBeforecalled());
+    }
+
+    @Test
+    public void beforeIsNotCalledIfDifferentMethodIsCalled() {
+        assertFalse(beforeAdvice.isBeforecalled());
+        simpleService.doSomethingElse(3);
+        assertFalse(beforeAdvice.isBeforecalled());
+    }
     
 }

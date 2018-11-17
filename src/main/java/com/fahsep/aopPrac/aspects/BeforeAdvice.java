@@ -23,7 +23,7 @@ public class BeforeAdvice {
         return beforecalled;
     }
 
-    @Before("execution(void doSomething())")
+    @Before("execution(void doSomthing())")
     public void entering(JoinPoint joinPoint) {
         beforecalled = true;
         logger.trace("entering " + joinPoint.getStaticPart().getSignature().toLongString());
