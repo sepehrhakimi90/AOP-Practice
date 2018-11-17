@@ -22,5 +22,9 @@ dependencies {
     testCompile group: 'org.spockframework', name: 'spock-spring', version: '1.1-groovy-2.3'
     compile group: 'org.aspectj', name: 'aspectjrt', version: '1.9.2'
     compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.2'
+
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    testCompile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.25'
+    
     
 }
